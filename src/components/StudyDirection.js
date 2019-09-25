@@ -48,9 +48,9 @@ const StudyDirection = ({ dirInfo = {} }) => {
   return (
     <div className="columns">
       <div className="column is-10 is-offset-1 has-text-centered">
-        <h3 className="title is-size-2 has-text-weight-bold">{heading}</h3>
+        <h3 className="is-size-2">{heading}</h3>
         <div className="section is-small">
-          <div className="tabs is-fullwidth">
+          <div className="tabs is-centered">
             <ul>
               {tabs.map((o, i) => (
                 <li key={i} className={o.className}>

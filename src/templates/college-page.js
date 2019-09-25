@@ -7,7 +7,7 @@ import StudyDirection from "../components/StudyDirection";
 const BackgroundInfo = ({ heading = "", bakPara = [] }) => (
   <div className="columns">
     <div className="column is-10 is-offset-1 has-text-centered">
-      <h3 className=" is-size-2 has-text-weight-bold">{heading}</h3>
+      <h3 className=" is-size-2">{heading}</h3>
       <br />
       <div className="is-size-6">
         {bakPara.map((o, i) => (
@@ -40,7 +40,7 @@ const CollegeTemplate = ({ image, background, direction }) => {
         </div>
       </div>
       <div className="section section--gradient">
-        <div className="container">
+        <div className="container" style={{ marginTop: "50px" }}>
           <StudyDirection dirInfo={direction} />
         </div>
       </div>

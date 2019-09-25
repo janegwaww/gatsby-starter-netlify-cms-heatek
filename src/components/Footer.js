@@ -116,8 +116,8 @@ const Footer = class extends React.Component {
                         style={{ margin: "auto" }}
                       >
                         <img src={qr} alt="heatex-qrcode" />
-                        <p>黑顿科技</p>
                       </div>
+                      <p style={{ padding: "10px 0" }}>黑顿科技</p>
                     </div>
                   </div>
                 </div>

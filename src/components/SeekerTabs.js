@@ -21,7 +21,7 @@ function SeekerTabs({ scrollItems = [] }) {
   };
   return (
     <div>
-      <div className="tabs is-centered is-fullwidth" id="tabs">
+      <div className="tabs is-centered" id="tabs">
         <ul>
           {[...items].map((o, i) => (
             <li key={i} className={`has-text-centered ${o.className}`}>
@@ -31,9 +31,7 @@ function SeekerTabs({ scrollItems = [] }) {
           ))}
         </ul>
       </div>
-      <br />
-      <br />
-      <div className="container">
+      <div className="section">
         <ContainCard info={contentItem} />
       </div>
     </div>

@@ -16,16 +16,20 @@ const ContainCard = ({ info = {} }) => {
         </figure>
       </div>
       <div className="card-stacked">
-        <div className="card-content">
+        <div className="card-content" style={{ padding: "1rem 2.8rem" }}>
           <div className="media">
             <div className="media-content">
-              <p className="title is-size-3">{info.heading}</p>
+              <p className="is-size-3">{info.subHeading}</p>
             </div>
           </div>
-          <div className="content is-size-6 has-text-grey-light">
+          <div className="content is-size-6 has-text-grey">
             {info.description}
           </div>
-          <a href="#top" className="button has-text-grey">
+          <a
+            href="#top"
+            className="button is-size-7"
+            style={{ padding: "16px 26px 16px 26px", color: "#999999" }}
+          >
             了解更多
           </a>
         </div>
@@ -38,7 +42,7 @@ ContainCard.propTypes = {
   info: PropTypes.shape({
     image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     alt: PropTypes.string,
-    heading: PropTypes.string,
+    subHeading: PropTypes.string,
     description: PropTypes.string,
     button: PropTypes.string
   })

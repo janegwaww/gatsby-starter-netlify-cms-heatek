@@ -28,13 +28,13 @@ function SolutionTabs({ solutionItems }) {
 
   return (
     <div className="solution-tabs">
-      <h3 className="has-text-weight-bold is-size-3 is-size-4-mobile has-text-black has-text-centered">
+      <h3 className="is-size-3 is-size-4-mobile has-text-black has-text-centered">
         {solutionItems.heading}
       </h3>
       <br />
       <div className="columns is-centered">
         <div className="column is-8">
-          <div className="tabs is-centered is-fullwidth">
+          <div className="tabs is-centered">
             <ul>
               {[...items].map((o, i) => (
                 <li key={i} className={o.className}>
@@ -49,7 +49,11 @@ function SolutionTabs({ solutionItems }) {
       <div className="container">
         <div id="carousel-solution" className="carousel">
           {[...items].map((o, i) => (
-            <div key={i} className={`item-${i}`} style={{ padding: "0 2rem" }}>
+            <div
+              key={i}
+              className={`item-${i}`}
+              style={{ padding: "0 1.4rem" }}
+            >
               <SolutionCard info={o} />
             </div>
           ))}

@@ -47,7 +47,7 @@ const AboutUsTemplate = ({ image, intro, creaters }) => {
             <div className="columns">
               <div className="column is-10 is-offset-1">
                 <div style={headStyle(680)}>
-                  <h3 className="has-text-black is-size-2 has-text-centered has-text-weight-bold is-size-3-mobile">
+                  <h3 className="has-text-black is-size-2 has-text-centered is-size-3-mobile">
                     {intro.heading}
                   </h3>
                 </div>
@@ -62,13 +62,13 @@ const AboutUsTemplate = ({ image, intro, creaters }) => {
       </div>
       <div
         className="section"
-        style={{ backgroundColor: "rgba(249,251,253,1)" }}
+        style={{ backgroundColor: "rgba(249,251,253,1)", display: "none" }}
       >
         <div className="container">
           <div className="columns">
             <div className="column is-10 is-offset-1 has-text-centered">
               <div style={headStyle(200)}>
-                <h3 className="has-text-weight-bold is-size-2 is-size-3-mobile">
+                <h3 className="is-size-2 is-size-3-mobile">
                   {creaters.heading}
                 </h3>
               </div>

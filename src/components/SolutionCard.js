@@ -7,7 +7,7 @@ const SolutionCard = ({ info = {} }) => {
     <div
       className=" has-background-white"
       style={{
-        borderRadius: "5px",
+        borderRadius: "10px",
         boxShadow: "0px 4px 10px 0px rgba(0,0,0,0.1)"
       }}
     >
@@ -21,20 +21,44 @@ const SolutionCard = ({ info = {} }) => {
             </figure>
           </div>
         </div>
-        <div className="column is-half has-background-white">
-          <div className="section">
-            <div className="container">
-              <p className="title is-size-3 is-size-4-mobile">{info.heading}</p>
+        <div
+          className="column is-half has-background-white"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignContent: "center"
+          }}
+        >
+          <div
+            className="section"
+            style={{
+              padding: "4rem 2.5rem",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between"
+            }}
+          >
+            <div>
+              <p className="content is-size-4 is-size-5-mobile">
+                {info.heading}
+              </p>
               <p className="content is-size-6 has-text-grey">
                 {info.description}
               </p>
-              <a
-                href="#top"
-                className="button is-link is-medium is-size-6-mobile"
-              >
-                查看详情
-              </a>
             </div>
+
+            <a
+              href="#top"
+              className="button is-medium is-size-6 is-size-6-mobile"
+              style={{
+                color: "white",
+                padding: "20px 26px 20px 26px",
+                backgroundColor: "#0C66FF",
+                width: "132px"
+              }}
+            >
+              查看详情
+            </a>
           </div>
         </div>
       </div>
