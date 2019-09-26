@@ -46,16 +46,9 @@ const SolutionCard = ({ info = {} }) => {
                 {info.description}
               </p>
             </div>
-
             <a
-              href="#top"
-              className="button is-medium is-size-6 is-size-6-mobile"
-              style={{
-                color: "white",
-                padding: "20px 26px 20px 26px",
-                backgroundColor: "#0C66FF",
-                width: "132px"
-              }}
+              className="button is-blue is-size-6 is-size-6-mobile"
+              style={{ width: "132px" }}
             >
               查看详情
             </a>

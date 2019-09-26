@@ -4,35 +4,34 @@ import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 const ContainCard = ({ info = {} }) => {
   return (
-    <div
-      className="card is-horizontal has-background-white"
-      style={{ display: "flex", boxShadow: "none", borderRadius: "5px" }}
-    >
-      <div className="card-image" style={{ width: "100%", height: "100%" }}>
+    <div className="columns is-horizontal has-background-white">
+      <div className="column is-5">
         <figure className="image">
-          <PreviewCompatibleImage
-            imageInfo={{ ...info, style: { borderRadius: "none" } }}
-          />
+          <PreviewCompatibleImage imageInfo={info} />
         </figure>
       </div>
-      <div className="card-stacked">
-        <div className="card-content" style={{ padding: "1rem 2.8rem" }}>
-          <div className="media">
-            <div className="media-content">
-              <p className="is-size-3">{info.subHeading}</p>
-            </div>
+      <div
+        className="column is-7"
+        style={{
+          padding: "3rem 2.8rem",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between"
+        }}
+      >
+        <div className="content">
+          <div className="content">
+            <p className="is-size-4">{info.subHeading}</p>
           </div>
-          <div className="content is-size-6 has-text-grey">
-            {info.description}
-          </div>
-          <a
-            href="#top"
-            className="button is-size-7"
-            style={{ padding: "16px 26px 16px 26px", color: "#999999" }}
-          >
-            了解更多
-          </a>
+          <p className=" is-size-6 has-text-grey">{info.description}</p>
         </div>
+        <a
+          href="#top"
+          className="button is-white-blue is-size-6"
+          style={{ width: "120px" }}
+        >
+          了解更多
+        </a>
       </div>
     </div>
   );
