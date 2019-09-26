@@ -18,10 +18,16 @@ $body-color: #333
 $black: #2b2523
 $navbar-height: 3.75rem
 
-.navbar .container
-  max-width: 1817px
-.navbar .navbar-menu
-  box-shadow:none !important
+.navbar
+  .container
+    max-width: 1620px
+  .navbar-menu
+    margin-left: 50px
+    .navbar-item
+      margin-right: 50px
+  .language
+    a.is-active
+      color: #363636
 
 .button
   &.is-opacity
@@ -100,6 +106,7 @@ $navbar-height: 3.75rem
   padding: 0 1rem
 .navbar-brand .navbar-item img
   max-height: unset
+
 /* --------footer start---------
 footer.footer
   padding: 3rem 0rem 0rem
