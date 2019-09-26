@@ -46,11 +46,11 @@ const JoinTemplate = ({ image, filterJobs, newJobs }) => {
               <div className="content">
                 <div className="columns">
                   <div className="column is-4">
-                    <p className="has-text-weight-bold">{filterJobs.heading}</p>
+                    <p className="has-text-grey-dark">{filterJobs.heading}</p>
                     <JobCategory jobCate={filterJobs.blurbs} />
                   </div>
                   <div className="column is-8">
-                    <p className="has-text-weight-bold">{newJobs.heading}</p>
+                    <p className="has-text-grey-dark">{newJobs.heading}</p>
                     {jobList.length === 0
                       ? null
                       : jobList.map((o, i) => <JobCard info={o} key={i} />)}

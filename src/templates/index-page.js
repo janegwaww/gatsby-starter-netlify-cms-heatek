@@ -13,10 +13,9 @@ const RatePanel = ({ rateItems = [] }) => {
       <p className="is-size-3 has-text-white">{info.description}</p>
       <div
         style={{
-          width: "30px",
-          borderTop: "solid .3rem white",
-          padding: "0 0 .6em 0",
-          margin: "auto"
+          width: "40px",
+          borderTop: "solid .2rem white",
+          margin: "2px 0 20px 0"
         }}
       />
       <p className="heading has-text-white is-size-6">{info.heading}</p>
@@ -24,13 +23,13 @@ const RatePanel = ({ rateItems = [] }) => {
   );
   return (
     <div className="level is-mobile">
-      <div className="level-left has-text-centered">
+      <div className="level-left">
         <Item info={rateItems[0]} />
       </div>
-      <div className="level-item has-text-centered">
+      <div className="level-item">
         <Item info={rateItems[1]} />
       </div>
-      <div className="level-right has-text-centered">
+      <div className="level-right">
         <Item info={rateItems[2]} />
       </div>
     </div>

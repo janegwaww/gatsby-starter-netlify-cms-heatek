@@ -22,13 +22,13 @@ function AboutFeatures({ features = [] }) {
                 <div style={imageStyle}>
                   <PreviewCompatibleImage imageInfo={o} />
                 </div>
-                <p
-                  className="has-text-weight-bold is-size-5"
-                  style={{ padding: "1em 0" }}
-                >
+                <p className="is-size-5" style={{ padding: "1em 0" }}>
                   {o.heading}
                 </p>
-                <p className="has-text-grey" style={{ padding: "0 .8em" }}>
+                <p
+                  className="is-size-6"
+                  style={{ padding: "0 .8em", color: "#666666" }}
+                >
                   {o.text}
                 </p>
               </div>

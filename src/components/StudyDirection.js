@@ -6,25 +6,19 @@ const Article = ({ article = {} }) => {
   const para1 = article.article[0];
   const para2 = article.article[1];
   return (
-    <div className="content has-text-left">
-      <h1>{article.heading}</h1>
-      <h3>
+    <div className="content has-text-left" style={{ padding: "0rem 5.4rem" }}>
+      <p className="is-size-4">{article.heading}</p>
+      <br />
+      <p className="is-size-5">
         {para1.heading}
-        <a href={para1.link} target="_blank">
-          &ensp;
-          {<span style={{ textDecoration: "underline" }}>{para1.label}</span>}
-          &ensp;
-        </a>
-      </h3>
+        <a href={para1.link} target="_blank"></a>
+      </p>
       <p>{para1.content}</p>
-      <h3>
+      <br />
+      <p className="is-size-5">
         {para2.heading}
-        <a href={para2.link} target="_blank">
-          &ensp;
-          {<span style={{ textDecoration: "underline" }}>{para2.label}</span>}
-          &ensp;
-        </a>
-      </h3>
+        <a href={para2.link} target="_blank"></a>
+      </p>
       <p>{para2.content}</p>
     </div>
   );
@@ -48,14 +42,17 @@ const StudyDirection = ({ dirInfo = {} }) => {
   return (
     <div className="columns">
       <div className="column is-10 is-offset-1 has-text-centered">
-        <h3 className="is-size-2">{heading}</h3>
+        <h3 className="is-size-3">{heading}</h3>
         <div className="section is-small">
           <div className="tabs is-centered">
             <ul>
               {tabs.map((o, i) => (
                 <li key={i} className={o.className}>
                   <div>
-                    <div className="image is-96x96" style={{ margin: "auto" }}>
+                    <div
+                      className="image"
+                      style={{ margin: "auto", width: "80px" }}
+                    >
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: o.image,
@@ -64,7 +61,9 @@ const StudyDirection = ({ dirInfo = {} }) => {
                       />
                     </div>
                     <br />
-                    <a onClick={() => tabSelect(i)}>{o.heading}</a>
+                    <a onClick={() => tabSelect(i)} style={{ width: "128px" }}>
+                      {o.heading}
+                    </a>
                   </div>
                 </li>
               ))}

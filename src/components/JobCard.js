@@ -8,7 +8,6 @@ function JobCard({ info = {} }) {
         <p className="is-size-5">{info.heading}</p>
       </div>
       <p>{info.date}</p>
-      <br />
       <p>{info.description}</p>
     </div>
   );
