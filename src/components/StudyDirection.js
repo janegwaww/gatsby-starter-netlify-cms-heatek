@@ -6,7 +6,10 @@ const Article = ({ article = {} }) => {
   const para1 = article.article[0];
   const para2 = article.article[1];
   return (
-    <div className="content has-text-left" style={{ padding: "0rem 5.4rem" }}>
+    <div
+      className="content has-text-left"
+      style={{ maxWidth: "840px", margin: "auto" }}
+    >
       <p className="is-size-4">{article.heading}</p>
       <br />
       <p className="is-size-5">
