@@ -34,7 +34,7 @@ function SolutionTabs({ solutionItems }) {
       <br />
       <div className="columns is-centered">
         <div className="column is-8">
-          <div className="tabs is-centered">
+          <div className="tabs is-around">
             <ul>
               {[...items].map((o, i) => (
                 <li key={i} className={o.className}>

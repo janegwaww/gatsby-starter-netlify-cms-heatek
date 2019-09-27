@@ -8,7 +8,7 @@ import JobCategory from "../components/JobCategory";
 const JoinTemplate = ({ image, filterJobs, newJobs }) => {
   const jobList = newJobs.blurbs;
   return (
-    <div>
+    <div className="join">
       <div
         className="full-width-image margin-top-0"
         style={{
@@ -26,12 +26,22 @@ const JoinTemplate = ({ image, filterJobs, newJobs }) => {
               <div className="field">
                 <div className="control has-icons-left">
                   <input
-                    className="input is-medium has-background-grey-lighter"
-                    type="email"
+                    className="input"
+                    type="text"
                     placeholder="搜索工作岗位"
+                    style={{
+                      backgroundColor: "#E8E8E8",
+                      height: "60px",
+                      paddingLeft: "60px"
+                    }}
                   />
-                  <span className="icon is-medium is-left">
-                    <i className="fas fa-envelope"></i>
+                  <span
+                    className="icon is-medium is-left"
+                    style={{ height: "60px", width: "60px" }}
+                  >
+                    <i className="image is-20x20">
+                      <img src="./img/search.png" width="20" height="20" />
+                    </i>
                   </span>
                 </div>
               </div>

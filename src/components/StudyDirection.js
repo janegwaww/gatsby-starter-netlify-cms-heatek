@@ -42,7 +42,7 @@ const StudyDirection = ({ dirInfo = {} }) => {
       <div className="column is-10 is-offset-1 has-text-centered">
         <h3 className="is-size-3">{heading}</h3>
         <div className="section is-small">
-          <div className="tabs is-centered">
+          <div className="tabs is-around">
             <ul>
               {tabs.map((o, i) => (
                 <li key={i} className={o.className}>

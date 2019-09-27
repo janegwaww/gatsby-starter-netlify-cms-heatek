@@ -4,6 +4,7 @@
 // Config vars
 $red-invert: #fff
 $tab-blue: #0c66ff
+$placeholder-color: #666666
 
 $tabs-border-bottom-color: #e8e8e8
 $tabs-border-bottom-width: 1px
@@ -11,12 +12,14 @@ $tabs-link-hover-border-bottom-color: transparent
 $tabs-link-active-border-bottom-color: $tab-blue
 $tabs-link-hover-color: $tab-blue
 $tabs-link-active-color: $tab-blue
-$tabs-link-padding: .5em 0em 1em 0em
+$tabs-link-padding: .5em 1em
 $navbar-tab-hover-border-bottom-color: transparent
 $navbar-tab-active-border-bottom-width: 2px
 $body-color: #333
 $black: #2b2523
 $navbar-height: 3.75rem
+$input-placeholder-color: $placeholder-color
+
 
 .navbar
   .container
@@ -50,6 +53,19 @@ $navbar-height: 3.75rem
     &:hover
       color: white
       background-color: #1758C6
+
+.tabs
+  &.is-around
+    ul
+      justify-content: space-around
+    li.is-active
+      a
+        border-bottom-width: 2px
+
+.image
+  &.is-20x20
+    width: 20px
+    height: 20px
 
 .content .taglist
   list-style: none
@@ -179,13 +195,6 @@ $menu-label-color: $white-ter
 @import "~bulma-extensions"
 @import "~bulma-extensions/bulma-carousel/dist/css/bulma-carousel.min.css"
 
-.tabs
-  li.is-active
-    a
-      border-bottom-width: 2px
-  &.is-centered
-    ul
-      justify-content: space-around
 
 // responsiveness
 +tablet-only
@@ -206,3 +215,11 @@ $menu-label-color: $white-ter
    a
      color: #666666
 /* ----solution-tabs end------
+
+
+/* ---join start-----
+.join
+  input placeholder
+    ::-webkit-input-placeholder
+      color: red
+/* ----join end------

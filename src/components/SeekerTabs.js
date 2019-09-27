@@ -21,12 +21,14 @@ function SeekerTabs({ scrollItems = [] }) {
   };
   return (
     <div>
-      <div className="tabs is-centered" id="tabs">
+      <div className="tabs is-around" id="tabs">
         <ul>
           {[...items].map((o, i) => (
             <li key={i} className={`has-text-centered ${o.className}`}>
-              <p className="is-size-7 has-text-grey-light">{o.heading}</p>
-              <a onClick={() => _tabSelect(o.heading)}>{o.subHeading}</a>
+              <div>
+                <div className="is-size-7 has-text-grey-light">{o.heading}</div>
+                <a onClick={() => _tabSelect(o.heading)}>{o.subHeading}</a>
+              </div>
             </li>
           ))}
         </ul>
