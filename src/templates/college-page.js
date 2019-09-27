@@ -7,7 +7,7 @@ import StudyDirection from "../components/StudyDirection";
 const BackgroundInfo = ({ heading = "", bakPara = [] }) => (
   <div className="columns">
     <div className="column is-10 is-offset-1 has-text-centered">
-      <h3 className=" is-size-2">{heading}</h3>
+      <h3 className=" is-size-3">{heading}</h3>
       <br />
       <div className="is-size-6">
         {bakPara.map((o, i) => (
