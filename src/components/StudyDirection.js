@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
+import _ from "lodash";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 const Article = ({ article = {} }) => {
@@ -12,17 +13,11 @@ const Article = ({ article = {} }) => {
     >
       <p className="is-size-4">{article.heading}</p>
       <br />
-      <p className="is-size-5">
-        {para1.heading}
-        <a href={para1.link} target="_blank"></a>
-      </p>
-      <p>{para1.content}</p>
+      <p className="is-size-5">{para1.heading}</p>
+      <p dangerouslySetInnerHTML={{ __html: para1.content }}></p>
       <br />
-      <p className="is-size-5">
-        {para2.heading}
-        <a href={para2.link} target="_blank"></a>
-      </p>
-      <p>{para2.content}</p>
+      <p className="is-size-5">{para2.heading}</p>
+      <p dangerouslySetInnerHTML={{ __html: para2.content }}></p>
     </div>
   );
 };
@@ -43,7 +38,7 @@ const StudyDirection = ({ dirInfo = {} }) => {
     setArticle(blurbs[index]);
   };
   return (
-    <div className="columns">
+    <div className="columns study-direction">
       <div className="column is-10 is-offset-1 has-text-centered">
         <h3 className="is-size-3">{heading}</h3>
         <div className="section is-small">
@@ -56,12 +51,7 @@ const StudyDirection = ({ dirInfo = {} }) => {
                       className="image"
                       style={{ margin: "auto", width: "80px" }}
                     >
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: o.image,
-                          alt: o.alt
-                        }}
-                      />
+                      <PreviewCompatibleImage imageInfo={o} />
                     </div>
                     <br />
                     <a onClick={() => tabSelect(i)} style={{ width: "128px" }}>
