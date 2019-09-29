@@ -36,7 +36,7 @@ const CollegeTemplate = ({ image, background, direction }) => {
           <h2 className="has-text-white is-size-3 is-size-4-mobile">
             黑顿研究院
           </h2>
-          <div style={{ lineHeight: 1, fontSize: "50px" }}>
+          <div style={{ lineHeight: 1.2, fontSize: "50px" }}>
             <h1 className="has-text-white is-size-3-mobile">
               HAETEK Institute of Machine Intelligence,
             </h1>
