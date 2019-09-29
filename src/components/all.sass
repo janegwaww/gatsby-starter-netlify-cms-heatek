@@ -30,7 +30,8 @@ $input-placeholder-color: $placeholder-color
     .navbar-item
       margin-right: 50px
       &.is-tab
-        padding: .5em 0em
+        padding-left: 0
+        padding-right: 0
   .language
     a.is-active
       color: #363636
@@ -58,12 +59,14 @@ $input-placeholder-color: $placeholder-color
 
 .tabs
   &.is-around
+    a
+      padding-left: 0
+      padding-right: 0
     ul
       justify-content: space-around
     li.is-active
       a
         border-bottom-width: 2px
-        padding: .5em 0em
 
 .image
   &.is-20x20
