@@ -29,7 +29,7 @@ function JobCategory({ jobCate = [] }) {
     );
   };
   return (
-    <div className="box">
+    <div className="box" style={{ borderRadius: "4px", boxShadow: "unset" }}>
       <div className="menu">
         <ul className="menu-list">
           {jobCate.length === 0

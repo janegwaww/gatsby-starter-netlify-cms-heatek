@@ -19,7 +19,7 @@ const Footer = class extends React.Component {
                           <p className="menu-label-f">使用指南</p>
                         </li>
                         <li>
-                          <Link to="/" className="navbar-item">
+                          <Link to="/" className="h-navbar-item">
                             帮助中心
                           </Link>
                         </li>
@@ -32,17 +32,17 @@ const Footer = class extends React.Component {
                           <p className="menu-label-f">友情链接</p>
                         </li>
                         <li>
-                          <Link className="navbar-item" to="/">
+                          <Link className="h-navbar-item" to="/">
                             中科院计算所
                           </Link>
                         </li>
                         <li>
-                          <Link className="navbar-item" to="/">
+                          <Link className="h-navbar-item" to="/">
                             阿里云
                           </Link>
                         </li>
                         <li>
-                          <Link className="navbar-item" to="/">
+                          <Link className="h-navbar-item" to="/">
                             腾讯云
                           </Link>
                         </li>
@@ -57,7 +57,7 @@ const Footer = class extends React.Component {
                           <p className="menu-label-f">联系我们</p>
                         </li>
                         <li>
-                          <Link className="navbar-item" to="/">
+                          <Link className="h-navbar-item" to="/">
                             <div style={{ display: "flex" }}>
                               <span className="image is-24x24">
                                 <img
@@ -70,7 +70,7 @@ const Footer = class extends React.Component {
                           </Link>
                         </li>
                         <li>
-                          <Link className="navbar-item" to="/">
+                          <Link className="h-navbar-item" to="/">
                             <div style={{ display: "flex" }}>
                               <span className="image is-24x24">
                                 <img
@@ -83,7 +83,7 @@ const Footer = class extends React.Component {
                           </Link>
                         </li>
                         <li>
-                          <Link className="navbar-item" to="/">
+                          <Link className="h-navbar-item" to="/">
                             <div style={{ display: "flex" }}>
                               <span className="image is-24x24">
                                 <img src={"./img/mail-icon.png"} alt="mail" />
@@ -93,7 +93,7 @@ const Footer = class extends React.Component {
                           </Link>
                         </li>
                         <li>
-                          <Link className="navbar-item" to="/">
+                          <Link className="h-navbar-item" to="/">
                             <div style={{ display: "flex" }}>
                               <span className="image is-24x24">
                                 <img

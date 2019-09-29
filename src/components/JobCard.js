@@ -3,8 +3,10 @@ import PropTypes from "prop-types";
 
 function JobCard({ info = {} }) {
   return (
-    <div className="box">
-      <h4>{info.heading}</h4>
+    <div className="box" style={{ borderRadius: "4px", boxShadow: "unset" }}>
+      <div className="" style={{ marginBottom: "6px" }}>
+        <p className="is-size-5">{info.heading}</p>
+      </div>
       <p>{info.date}</p>
       <br />
       <p>{info.description}</p>
