@@ -194,6 +194,8 @@ $menu-label-color: $white-ter
 @import "~bulma"
 @import "~bulma-extensions"
 @import "~bulma-extensions/bulma-carousel/dist/css/bulma-carousel.min.css"
+*:focus
+  outline: none
 
 
 // responsiveness
@@ -209,6 +211,7 @@ $menu-label-color: $white-ter
     max-width: 70%;
     margin: 0 0 1em;
 
+
 /* ---solution-tabs start---------
 .solution-tabs
  .tabs
@@ -219,7 +222,10 @@ $menu-label-color: $white-ter
 
 /* ---join start-----
 .join
-  input placeholder
-    ::-webkit-input-placeholder
-      color: red
+  input, textarea
+    &:focus
+      outline: none !important
+      border-color: inherit;
+      -webkit-box-shadow: none;
+      box-shadow: none;
 /* ----join end------
