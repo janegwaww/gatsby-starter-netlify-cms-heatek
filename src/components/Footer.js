@@ -6,7 +6,10 @@ const Footer = class extends React.Component {
   render() {
     return (
       <footer className="footer has-background-dark has-text-white-ter">
-        <div className="content has-text-centered has-background-dark has-text-white-ter">
+        <div
+          className="content has-text-centered has-background-dark has-text-white-ter"
+          style={{ marginBottom: "1.8rem" }}
+        >
           <div className="container has-background-dark has-text-white-ter">
             <div className="columns">
               <div className="column is-10 is-offset-1">
