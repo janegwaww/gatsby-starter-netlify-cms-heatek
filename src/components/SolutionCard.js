@@ -5,9 +5,10 @@ import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 const SolutionCard = ({ info = {} }) => {
   return (
     <div
-      className=" has-background-white"
+      className="box has-background-white"
       style={{
-        borderRadius: "10px",
+        padding: 0,
+        overflow: "hidden",
         boxShadow: "0px 4px 10px 0px rgba(0,0,0,0.1)"
       }}
     >

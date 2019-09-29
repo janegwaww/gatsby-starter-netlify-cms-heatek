@@ -9,12 +9,28 @@ function SolutionTabs({ solutionItems }) {
       i === 0 ? { ...o, className: "is-active" } : o
     )
   );
+  const [caro, setCaro] = useState({});
+  const [index, setIndex] = useState(0);
   const _tabSelect = key => {
+    if (Math.abs(key - index) > 1) return;
+    setIndex(key);
     setItems(
       items.map((o, i) =>
         i === key ? { ...o, className: "is-active" } : { ...o, className: "" }
       )
     );
+    // if (key !== caro.state.index) {
+    //   const minu = key - caro.state.index;
+    //   for (let i = 0; i < Math.abs(minu); i--) {
+    //     minu > 0 ? caro.next() : caro.previous();
+    //   }
+    // }
+    // console.log(caro.state.index);
+    if (key - index > 0) {
+      caro.next();
+    } else if (key - index < 0) {
+      caro.previous();
+    }
   };
   useEffect(() => {
     const carousels = bulmaCarousel.attach(`#carousel-solution`, {
@@ -24,6 +40,7 @@ function SolutionTabs({ solutionItems }) {
       effect: "translate",
       pagination: false
     });
+    setCaro(carousels[0]);
   });
 
   return (
@@ -49,11 +66,7 @@ function SolutionTabs({ solutionItems }) {
       <div className="container">
         <div id="carousel-solution" className="carousel">
           {[...items].map((o, i) => (
-            <div
-              key={i}
-              className={`item-${i}`}
-              style={{ padding: "0 1.4rem" }}
-            >
+            <div key={i} className={`item-${i}`} style={{ margin: "0 1.4rem" }}>
               <SolutionCard info={o} />
             </div>
           ))}
