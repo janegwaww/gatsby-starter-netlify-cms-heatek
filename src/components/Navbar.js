@@ -86,7 +86,7 @@ const Navbar = class extends React.Component {
                 to="/"
                 activeClassName={activeNav.home}
               >
-                首页
+                &ensp;首页&ensp;
               </Link>
               <Link
                 className="navbar-item is-tab"
