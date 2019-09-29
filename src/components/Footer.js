@@ -41,11 +41,6 @@ const Footer = class extends React.Component {
                             阿里云
                           </Link>
                         </li>
-                        <li>
-                          <Link className="h-navbar-item" to="/">
-                            腾讯云
-                          </Link>
-                        </li>
                       </ul>
                     </section>
                   </div>

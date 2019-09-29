@@ -5,8 +5,8 @@ import Layout from "../components/Layout";
 import StudyDirection from "../components/StudyDirection";
 
 const BackgroundInfo = ({ heading = "", bakPara = [] }) => (
-  <div className="columns">
-    <div className="column is-10 is-offset-1 has-text-centered">
+  <div className="columns is-centered">
+    <div className="column is-11 has-text-centered">
       <h3 className=" is-size-3">{heading}</h3>
       <br />
       <div className="is-size-6">
@@ -31,7 +31,21 @@ const CollegeTemplate = ({ image, background, direction }) => {
           })`,
           backgroundSize: "cover"
         }}
-      />
+      >
+        <div className="has-text-centered" style={{ lineHeight: 3 }}>
+          <h2 className="has-text-white is-size-3 is-size-4-mobile">
+            黑顿研究院
+          </h2>
+          <div style={{ lineHeight: 1, fontSize: "50px" }}>
+            <h1 className="has-text-white is-size-3-mobile">
+              HAETEK Institute of Machine Intelligence,
+            </h1>
+            <h1 className="has-text-white is-size-3-mobile">
+              Shenzhen, China.
+            </h1>
+          </div>
+        </div>
+      </div>
       <div className="section section--gradient has-background-white-ter">
         <div className="container">
           <div className="section">
