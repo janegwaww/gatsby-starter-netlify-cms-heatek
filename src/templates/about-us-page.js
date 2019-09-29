@@ -38,7 +38,8 @@ const AboutUsTemplate = ({ image, intro, creaters }) => {
           backgroundImage: `url(${
             !!image ? image.childImageSharp.fluid.src : image
           })`,
-          backgroundSize: "cover"
+          backgroundSize: "cover",
+          backgroundPosition: "center"
         }}
       />
       <div className="section section--gradient">
