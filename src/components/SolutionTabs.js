@@ -38,6 +38,8 @@ function SolutionTabs({ solutionItems }) {
       slidesToScroll: 1,
       slidesToShow: 1,
       effect: "translate",
+      navigationKeys: false,
+      navigation: false,
       pagination: false
     });
     setCaro(carousels[0]);
