@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
@@ -16,6 +16,11 @@ const SurveyTemplate = ({ questions }) => {
       setAnswered([...answered, e.currentTarget.name]);
     }
   };
+  useEffect(() => {
+    if (!answered.includes("question-0")) {
+      setAnswered([...answered, "question-0"]);
+    }
+  });
   return (
     <div>
       <progress
@@ -45,6 +50,13 @@ const SurveyTemplate = ({ questions }) => {
                               name={o.indexData}
                               value={abc[k]}
                               onChange={e => handleSelect(e)}
+                              disabled={
+                                !answered.includes(
+                                  o.indexData.split("-")[0] +
+                                    "-" +
+                                    (o.indexData.split("-")[1] - 1)
+                                )
+                              }
                             />
                             <label
                               htmlFor={`${o.indexData}-item-${k}`}
@@ -59,6 +71,13 @@ const SurveyTemplate = ({ questions }) => {
                           pattern="\d*"
                           maxLength="3"
                           onChange={handleSelect}
+                          disabled={
+                            !answered.includes(
+                              o.indexData.split("-")[0] +
+                                "-" +
+                                (o.indexData.split("-")[1] - 1)
+                            )
+                          }
                         />
                       )}
                     </div>
