@@ -91,7 +91,8 @@ export function IndexPageTemplate({ features, solution, business, rate }) {
         className="section section--gradient"
         style={{
           backgroundImage: `url('./img/coop-background.png')`,
-          backgroundSize: "100% 100%"
+          backgroundSize: "cover",
+          backgroundPosition: "center"
         }}
       >
         <div className="container">
@@ -106,13 +107,13 @@ export function IndexPageTemplate({ features, solution, business, rate }) {
         className="section has-background-link is-paddingless-mobile"
         style={{
           backgroundImage: `url(${"./img/persent.png"})`,
-          backgroundSize: "100% 100%",
+          backgroundSize: "cover",
           backgroundPosition: "center"
         }}
       >
         <div className="container">
           <div className="columns">
-            <div className="column is-10 is-offset-1 is-paddingless-tablet">
+            <div className="column is-10 is-offset-1 is-paddingless">
               <RatePanel rateItems={rate} />
             </div>
           </div>
