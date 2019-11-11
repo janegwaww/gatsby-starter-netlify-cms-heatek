@@ -171,7 +171,7 @@ class ProductCenterTemplate extends Component {
 
   render() {
     const {images, header, methods, advantages, banner, datapool} = this.props;
-    const {activeTab, tabs, isMobile} = this.state;
+    const {activeTab, tabs} = this.state;
     return (
       <div className="product-center">
         <BackgroundImageSwitch
@@ -179,8 +179,8 @@ class ProductCenterTemplate extends Component {
           switchHeight={["580px", "222px"]}
         >
           <div className="container">
-            <div className="columns is-mobile is-centered">
-              <div className={`column ${isMobile ? "is-12" : "is-10"}`}>
+            <div className="columns is-mobile">
+              <div className={`column is-10 is-offset-1`}>
                 <ProductTitle info={header} />
               </div>
             </div>
@@ -191,7 +191,7 @@ class ProductCenterTemplate extends Component {
           <div className="container">
             <div className="columns">
               <div className="column is-10 is-offset-1">
-                <div className="tabs is-left">
+                <div className="tabs is-left is-around-mobile">
                   <ul>
                     {tabs.map((o, i) => (
                       <li

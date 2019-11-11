@@ -13,7 +13,7 @@ const ProductSeekerBanner = ({bannerInfo}) => {
   const slider = {
     dots: false,
     arrows: false,
-    speed: 600,
+    speed: 1000,
     autoplaySpeed: 3000,
     autoplay: true,
     fade: true,
