@@ -15,6 +15,7 @@ const baiduAnalyticsConditionalConfig = () => {
 };
 
 module.exports = {
+  pathPrefix: `/gatsby-starter-netlify-cms`,
   siteMetadata: {
     title: "Haetek 黑顿科技",
     description:
