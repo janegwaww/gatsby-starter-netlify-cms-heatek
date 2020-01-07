@@ -10,6 +10,25 @@ images:
       alt: join banner
     - image: /img/join-mobile.png
       alt: join banner mobile
+filterJobs:
+    address:
+        - index: address
+          value: 搜索地点
+        - index: address
+          value: 深圳
+        - index: address
+          value: 北京
+        - index: address
+          value: 上海
+    position:
+        - index: position
+          value: 搜索岗位
+        - index: position
+          value: 开发部
+        - index: position
+          value: 算法部
+        - index: position
+          value: 市场部
 newJobs:
     - heading: 高级Web开发工程师
       date: 深圳 | 开发部 | 2019年9月30日

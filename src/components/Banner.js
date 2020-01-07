@@ -18,7 +18,14 @@ function Banner({ isMobile }) {
         />
       </div>
       <div className="content">
-        <a className="button is-opacity is-size-7-5-mobile">了解Seeker</a>
+        <a
+          href="http://seeker.haetek.com/#/"
+          className="button is-opacity is-size-7-5-mobile"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          了解Seeker
+        </a>
       </div>
     </div>
   );

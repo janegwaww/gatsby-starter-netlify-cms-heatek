@@ -17,7 +17,7 @@ const ProductSeekerBanner = ({bannerInfo}) => {
     autoplaySpeed: 3000,
     autoplay: true,
     fade: true,
-    infini: true,
+    infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     pauseOnHover: true,

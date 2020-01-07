@@ -1,6 +1,6 @@
 import React from "react";
-import {globalHistory} from "@reach/router";
-import {Link} from "gatsby";
+import { globalHistory } from "@reach/router";
+import { Link } from "gatsby";
 import LanguageSwitch from "../components/LanguageSwitch";
 import logo from "../img/logo.png";
 
@@ -10,7 +10,7 @@ const Navbar = class extends React.Component {
     this.state = {
       active: false,
       navBarActiveClass: "",
-      activeNav: {},
+      activeNav: {}
     };
   }
 
@@ -19,7 +19,7 @@ const Navbar = class extends React.Component {
       globalHistory.location.pathname
         .replace(/\/$/, "")
         .split("/")
-        .pop(),
+        .pop()
     );
   }
 
@@ -27,19 +27,19 @@ const Navbar = class extends React.Component {
     //   toggle the active boolean in the state
     this.setState(
       {
-        active: !this.state.active,
+        active: !this.state.active
       },
       //   after state has been updated,
       () => {
         //   set the class in state for the navbar accordingly
         this.state.active
           ? this.setState({
-              navBarActiveClass: "is-active",
+              navBarActiveClass: "is-active"
             })
           : this.setState({
-              navBarActiveClass: "",
+              navBarActiveClass: ""
             });
-      },
+      }
     );
   };
 
@@ -47,19 +47,19 @@ const Navbar = class extends React.Component {
     const path = nav ? nav : "home";
     this.setState({
       activeNav: {
-        [path]: "is-active",
-      },
+        [path]: "is-active"
+      }
     });
   };
 
   render() {
-    const {activeNav} = this.state;
+    const { activeNav } = this.state;
     return (
       <nav
         className="navbar is-fixed-top has-shadow is-transparent"
         role="navigation"
         aria-label="main navigation"
-        style={{boxShadow: "0px 2px 10px 0px rgba(0,0,0,0.1)"}}
+        style={{ boxShadow: "0px 2px 10px 0px rgba(0,0,0,0.1)" }}
       >
         <div className="container">
           <div className="navbar-brand">
@@ -93,35 +93,43 @@ const Navbar = class extends React.Component {
               </Link>
               <Link
                 className="navbar-item is-tab"
-                to="/productcenter"
+                to="/productcenter/"
                 activeClassName={activeNav.productcenter}
               >
                 产品中心
               </Link>
               <Link
                 className="navbar-item is-tab"
-                to="/case"
+                to="/bluesearch/"
+                activeClassName={activeNav.bluesearch}
+              >
+                模糊搜索
+              </Link>
+
+              <Link
+                className="navbar-item is-tab"
+                to="/case/"
                 activeClassName={activeNav.case}
               >
                 客户案例
               </Link>
               <Link
                 className="navbar-item is-tab"
-                to="/aboutus"
+                to="/aboutus/"
                 activeClassName={activeNav.aboutus}
               >
                 关于黑顿
               </Link>
               <Link
                 className="navbar-item is-tab"
-                to="/college"
+                to="/college/"
                 activeClassName={activeNav.college}
               >
                 黑顿研究院
               </Link>
               <Link
                 className="navbar-item is-tab"
-                to="/join"
+                to="/join/"
                 activeClassName={activeNav.join}
               >
                 加入我们

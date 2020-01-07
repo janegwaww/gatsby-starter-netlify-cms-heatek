@@ -14,7 +14,7 @@ const BackgroundImageSwitch = ({images, children, switchHeight}) => {
     } else {
       setImage(`${!!image1 ? image1.childImageSharp.fluid.src : image1}`);
     }
-  });
+  }, []);
   return (
     <div
       className="full-width-image margin-top-0"
@@ -38,7 +38,7 @@ BackgroundImageSwitch.propTypes = {
   images: PropTypes.arrayOf(
     PropTypes.shape({
       image: PropTypes.object.isRequired,
-      alt: PropTypes.string.isRequired,
+      alt: PropTypes.string,
     }),
   ),
   switchHeight: PropTypes.array,

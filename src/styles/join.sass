@@ -1,0 +1,36 @@
+/* ---join start-----
+.join
+  .search-input
+    .icon
+      pointer-events: auto
+      cursor: pointer
+  .dropdown
+    .image.is-20x20
+      height: auto
+  .join-jobs
+    .column .box
+      border-radius: 4px
+  input, textarea
+    &:focus
+      outline: none !important
+      border-color: #bbbbbb
+      -webkit-box-shadow: none;
+      box-shadow: none;
+  +mobile
+    .join-input.section
+      padding: 1.875em 1.5em 1.875em
+      .column
+        &:not(:last-child)
+          padding-right: 0.5em
+        .search-input .control.has-icons-right .icon
+          height: 1.6em
+          width: 1.6em
+        .select.h-select
+          &:not(.is-multiple):not(.is-loading)::after
+            top: 40%
+    .join-jobs
+      &.section
+        padding: 1.875em 1.875em
+      .column .box
+        border-radius: 2px
+/* ----join end------

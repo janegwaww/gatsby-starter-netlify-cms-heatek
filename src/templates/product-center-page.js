@@ -1,6 +1,6 @@
-import React, {Component, useState, useEffect} from "react";
+import React, { Component, useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import {graphql} from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 import ProductTitle from "../components/ProductTitle";
@@ -9,7 +9,7 @@ import ProductAdvantageTable from "../components/ProductAdvantageTable";
 import ProductSeekerBanner from "../components/ProductSeekerBanner";
 import BackgroundImageSwitch from "../components/BackgroundImageSwitch";
 
-const SeekerTabContent = ({method, advantage, imageInfo = {}}) => {
+const SeekerTabContent = ({ method, advantage, imageInfo = {} }) => {
   return (
     <div>
       <section className="section h-section has-background-grey-1">
@@ -37,7 +37,7 @@ const SeekerTabContent = ({method, advantage, imageInfo = {}}) => {
   );
 };
 
-const InfoPlusTabContent = ({method, advantage, imageInfo}) => {
+const InfoPlusTabContent = ({ method, advantage, imageInfo }) => {
   return (
     <div>
       <section className="section h-section has-background-grey-1">
@@ -66,7 +66,7 @@ const InfoPlusTabContent = ({method, advantage, imageInfo}) => {
                 方案架构
               </div>
               <PreviewCompatibleImage
-                imageInfo={{...imageInfo, style: {borderRadius: "unset"}}}
+                imageInfo={{ ...imageInfo, style: { borderRadius: "unset" } }}
               />
             </div>
           </div>
@@ -76,7 +76,7 @@ const InfoPlusTabContent = ({method, advantage, imageInfo}) => {
   );
 };
 
-const HDPPTabContent = ({method, datapool}) => {
+const HDPPTabContent = ({ method, datapool }) => {
   const [side, setSide] = useState("is-4");
   useEffect(() => {
     if (window.innerWidth <= 768) {
@@ -106,7 +106,7 @@ const HDPPTabContent = ({method, datapool}) => {
                   <div className={`column ${side}`} key={i}>
                     <figure className="image is-48x48 is-42x42-mobile margin-auto">
                       <PreviewCompatibleImage
-                        imageInfo={{...o, style: {borderRadius: "unset"}}}
+                        imageInfo={{ ...o, style: { borderRadius: "unset" } }}
                       />
                     </figure>
                     <div className="data-pool-cards-head is-size-6 is-size-6-mobile has-text-centered has-text-333">
@@ -126,7 +126,7 @@ const HDPPTabContent = ({method, datapool}) => {
   );
 };
 
-const TabTitle = ({info}) => {
+const TabTitle = ({ info }) => {
   return (
     <>
       <a className="is-size-6-5-mobile is-hidden-tablet">
@@ -144,34 +144,41 @@ class ProductCenterTemplate extends Component {
     this.state = {
       activeTab: {},
       tabs: this.props.tabs.map(i =>
-        i.index === "seeker" ? {...i, className: "is-active"} : i,
+        i.index === "seeker" ? { ...i, className: "is-active" } : i
       ),
-      isMobile: false,
+      isMobile: false
     };
   }
 
   componentDidMount() {
-    this.setState({activeTab: {seeker: "is-active"}});
+    this.setState({ activeTab: { seeker: "is-active" } });
     if (window.innerWidth <= 768) {
-      this.setState({isMobile: true});
+      this.setState({ isMobile: true });
     }
   }
 
   handleTab = index => {
-    const {tabs} = this.state;
+    const { tabs } = this.state;
     this.setState({
-      activeTab: {[index]: "is-active"},
+      activeTab: { [index]: "is-active" },
       tabs: tabs.map(i =>
         i.index === index
-          ? {...i, className: "is-active"}
-          : {...i, className: ""},
-      ),
+          ? { ...i, className: "is-active" }
+          : { ...i, className: "" }
+      )
     });
   };
 
   render() {
-    const {images, header, methods, advantages, banner, datapool} = this.props;
-    const {activeTab, tabs} = this.state;
+    const {
+      images,
+      header,
+      methods,
+      advantages,
+      banner,
+      datapool
+    } = this.props;
+    const { activeTab, tabs } = this.state;
     return (
       <div className="product-center">
         <BackgroundImageSwitch
@@ -240,11 +247,11 @@ ProductCenterTemplate.propTypes = {
   methods: PropTypes.array,
   advantages: PropTypes.array,
   banner: PropTypes.object,
-  datapool: PropTypes.array,
+  datapool: PropTypes.array
 };
 
-const ProductCenter = ({data}) => {
-  const {frontmatter} = data.markdownRemark;
+const ProductCenter = ({ data }) => {
+  const { frontmatter } = data.markdownRemark;
   return (
     <Layout>
       <ProductCenterTemplate
@@ -262,15 +269,17 @@ const ProductCenter = ({data}) => {
 
 ProductCenter.propTypes = {
   data: PropTypes.shape({
-    frontmatter: PropTypes.object,
-  }),
+    frontmatter: PropTypes.object
+  })
 };
 
 export default ProductCenter;
 
 export const productCenterQuery = graphql`
   query ProductCenter {
-    markdownRemark(frontmatter: {templateKey: {eq: "product-center-page"}}) {
+    markdownRemark(
+      frontmatter: { templateKey: { eq: "product-center-page" } }
+    ) {
       frontmatter {
         images {
           image {
@@ -284,7 +293,9 @@ export const productCenterQuery = graphql`
         }
         header {
           heading
+          subheading
           description
+          subdescription
         }
         tabs {
           name

@@ -1,0 +1,165 @@
+// bluesearch start
+.product-value
+  .image
+    cursor: pointer
+    margin: 30px auto
+.product-scene
+  .scene-card
+    cursor: pointer
+    padding-top: 30px
+    padding-bottom: 60px
+    border-radius: 6px
+  .image
+    margin: 34px auto
+.product-textarea
+  .buttons
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: 20px auto
+    .refresh-button
+      display: flex
+      cursor: pointer
+      padding: 10px
+      user-select: none
+      border-radius: 4px
+      .icon
+        margin-right: 10px
+      &:active
+        background-color: whitesmoke
+        .icon
+          transform: rotate(90deg)
+    .button
+      height: 40px
+      margin-bottom: 0
+  .h-table-container
+      overflow-x: auto
+      &::-webkit-scrollbar
+        height: 10px
+        background-color: transparent
+      &::-webkit-scrollbar-thumb
+        background: hsl(0, 0%, 86%)
+        -webkit-border-radius: 5ex
+  .h-table
+    display: table
+    width: 100%
+    border: 1px solid #ebebeb
+    @include tablet
+      min-width: 1100px
+    .tr
+      display: table-row
+      .td
+        border-bottom: 1px solid #ebebeb
+        border-right: 1px solid #ebebeb
+        display: table-cell
+        color: #666666
+        font-weight: normal
+        text-align: center
+        vertical-align: top
+        font-size: 14px
+        max-height: 531px
+        padding: 40px 40px
+        &:nth-child(even)
+          width: 27%
+        &:nth-child(odd)
+          width: 36%
+      &.thead
+        background-color: #fbfbfb
+        height: 60px
+        .td
+          padding: 0
+          vertical-align: middle
+          border-right: 1px solid #ebebeb
+          &:last-child
+            border-right: 0
+      &.tbody
+        .td
+          border-bottom: 0
+          height: 531px
+          &:last-child
+            border-right: 0
+      .textarea
+        color: #666666
+        background-color: #f8f8f9
+        font-size: 14px
+        border: none
+        box-shadow: unset
+        resize: none
+        height: 480px
+        overflow: auto
+        outline: none
+        text-align: left
+        scrollbar-width: none
+        &[disabled]
+          background-color: transparent
+        &::-webkit-scrollbar
+          height: 0
+    +mobile
+      .thead
+        display: none
+      .tbody .td
+        display: table-row
+  .search-input
+    .control
+      .input
+        font-size: 14px
+        padding-top: 21px
+        padding-bottom: 21px
+        box-shadow: unset
+      .button.is-info
+        background-color: #ebebeb
+        &.is-active
+          background-color: #0c66ff
+    .buttons .button
+      font-size: 14px
+      height: 3em
+      color: #666666
+      &.is-active
+        background-color: #0c66ff
+        color: white
+        border: 0
+      &:last-child
+        margin-bottom: 0
+  .search-result
+    text-align: left
+    label
+      display: flex
+      align-items: center
+      span
+        user-select: none
+    .relate-section
+      overflow: auto
+      max-height: 380px
+      scrollbar-width: thin
+      scrollbar-color: hsl(0, 0%, 86%) transparent
+      &::-webkit-scrollbar
+        width: 8px
+        background-color: transparent
+      &::-webkit-scrollbar-thumb
+        background: hsl(0, 0%, 86%)
+        -webkit-border-radius: 5ex
+    .related-item
+      display: flex
+      justify-content: flex-start
+      margin-bottom: 40px
+      &:last-child
+        margin-bottom: 0
+      &:first-child
+        .index-num
+          background-color: #f67280
+        .relate-num
+          color: #f67280
+      .index-num
+        background-color: #d9d9d9
+        border-radius: 100px
+        width: 22px
+        height: 22px
+        text-align: center
+        color: white
+      .relate-num
+        color: #333333
+  .search-spinner
+    position: absolute
+    top: 50%
+    left: 45%
+// bluesearch end

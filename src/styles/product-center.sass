@@ -1,0 +1,124 @@
+// product center start
+.product-title
+  .product-title-buttons
+    padding: 0.25rem 0
+    .is-blue
+      padding: 5px 11px
+    .button
+      &:hover
+        background-color: white
+        color: #0c66ff
+      @include tablet
+        display: flex
+        width: 100%
+.product-center
+  .product-method-title
+    .product-method-head
+      display: flex
+      align-items: center
+      .image
+        margin-right: 20px
+        @include mobile
+          margin-right: 10px
+    .product-method-content
+      line-height: 26px
+      letter-spacing: 1px
+      @include mobile
+        letter-spacing: 0
+  .h-product-navbar
+    top: 60px
+    position: -webkit-sticky
+    position: sticky
+    z-index: 10
+    .column
+      padding-top: 0
+      padding-bottom: 0
+      a
+        height: 60px
+  .tab-content
+    opacity: 0
+    display: none
+    &.is-active
+      opacity: 1
+      display: block
+  .table
+    thead
+      background-color: #FBFBFB
+      tr
+        height: 60px
+    .th
+      color: #666
+      text-align: center
+      vertical-align: middle
+      font-weight: normal
+    .tr
+      font-weight: normal
+      color: #666
+      text-align: center
+      width: 80px
+      height: 156px
+      vertical-align: middle
+      .tr-text
+        writing-mode: vertical-rl
+        text-orientation: upright
+        line-height: 24px
+        letter-spacing: .5rem
+        margin: 0 auto
+    .tc
+      font-weight: normal
+      line-height: 30px
+      vertical-align: middle
+      padding: 0 40px
+      .tc-para
+        display: flex
+  .seeker-banner
+    .h-slider-container
+      width: 681px
+      position: relative
+      margin: auto
+      top: -2.65rem
+      left: -3.9rem
+      @include mobile
+        width: 240px
+        height: 195px
+        top: 0.8rem
+        left: 0
+      .slider-list
+        padding: 0
+    .is-681x383
+      width: 681px
+      height: 383px
+  .data-pool-cards
+    .column
+      padding: 1.875rem 0.75rem
+      @include mobile
+        padding: 1.25rem 0.5rem
+    .data-pool-cards-head
+      padding: 20px
+      @include mobile
+        padding: 10px
+    .data-pool-cards-text
+      line-height: 26px
+      @include mobile
+        line-height: unset
+  +mobile
+    .tabs
+      a
+        flex-direction: column
+    .table
+      th
+        padding: 0
+      thead
+        tr
+          height: 30px
+      .tr
+        width: 30px
+        height: 100px
+        padding: 8px 0
+      .tc
+        line-height: 18px
+        padding: 0 10px
+    .is-240x140-mobile
+      width: 240px
+      height: 140px !important
+// product center end

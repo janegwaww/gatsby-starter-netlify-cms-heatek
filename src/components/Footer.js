@@ -7,6 +7,56 @@ import mail from "../img/mail-icon.svg";
 import address from "../img/address-icon.svg";
 import gov from "../img/gov.png";
 
+const contantUsObj = [
+  {
+    index: "mobile",
+    src: mobile,
+    content: "155-2412-0109（市场部 刘经理）",
+    to: "/",
+  },
+  {
+    index: "wechat",
+    src: wechat,
+    content: "haetek_20190801",
+    to: "/",
+  },
+  {
+    index: "mail",
+    src: mail,
+    content: "peizhengqi@kc-group.com.cn",
+    to: "/",
+  },
+  {
+    index: "address",
+    src: address,
+    content: "广东省深圳市龙岗区龙翔大道7188号万科大厦3109",
+    to: "/",
+  },
+];
+
+const intro = [
+  {
+    index: "help",
+    name: "帮助中心",
+    to: "/",
+  },
+  {
+    index: "zhongkeyuan",
+    name: "中科院计算所",
+    to: "/",
+  },
+  {
+    index: "aliyun",
+    name: "阿里云",
+    to: "/",
+  },
+  {
+    index: "tensentclound",
+    name: "腾讯云",
+    to: "/",
+  },
+];
+
 const FooterMobile = () => (
   <div
     className="footer-mobile content is-hidden-tablet is-size-7-mobile has-text-centered"
@@ -56,6 +106,7 @@ const FooterBottom = () => {
                       className="bd-notification is-primary has-text-grey"
                       href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030702002640"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       粤公网安备 44030702002640号
                     </a>
@@ -98,26 +149,13 @@ const Footer = class extends React.Component {
                         <li>
                           <p className="menu-label-f">使用指南</p>
                         </li>
-                        <li>
-                          <Link to="/" className="h-navbar-item">
-                            帮助中心
-                          </Link>
-                        </li>
-                        <li>
-                          <Link className="h-navbar-item" to="/">
-                            中科院计算所
-                          </Link>
-                        </li>
-                        <li>
-                          <Link className="h-navbar-item" to="/">
-                            阿里云
-                          </Link>
-                        </li>
-                        <li>
-                          <Link className="h-navbar-item" to="/">
-                            腾讯云
-                          </Link>
-                        </li>
+                        {intro.map(o => (
+                          <li key={o.index}>
+                            <Link to={o.to} className="h-navbar-item">
+                              {o.name}
+                            </Link>
+                          </li>
+                        ))}
                       </ul>
                     </section>
                   </div>
@@ -128,47 +166,19 @@ const Footer = class extends React.Component {
                         <li>
                           <p className="menu-label-f">联系我们</p>
                         </li>
-                        <li>
-                          <Link className="h-navbar-item" to="/">
-                            <div style={{display: "flex"}}>
-                              <span className="image is-24x24">
-                                <img src={mobile} alt="mobile" />
-                              </span>
-                              &ensp; 155-2412-0109（市场部 刘经理）
-                            </div>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link className="h-navbar-item" to="/">
-                            <div style={{display: "flex"}}>
-                              <span className="image is-24x24">
-                                <img src={wechat} alt="wechat" />
-                              </span>
-                              &ensp; haetek_20190801
-                            </div>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link className="h-navbar-item" to="/">
-                            <div style={{display: "flex"}}>
-                              <span className="image is-24x24">
-                                <img src={mail} alt="mail" />
-                              </span>
-                              &ensp; peizhengqi@kc-group.com.cn
-                            </div>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link className="h-navbar-item" to="/">
-                            <div style={{display: "flex"}}>
-                              <span className="image is-24x24">
-                                <img src={address} alt="address" />
-                              </span>
-                              &ensp;
-                              广东省深圳市龙岗区龙翔大道7188号万科大厦3109
-                            </div>
-                          </Link>
-                        </li>
+                        {contantUsObj.map(o => (
+                          <li key={o.index}>
+                            <Link className="h-navbar-item" to={o.to}>
+                              <div>
+                                <span className="image is-24x24">
+                                  <img src={o.src} alt={o.alt} />
+                                </span>
+                                &ensp;
+                                <span>{o.content}</span>
+                              </div>
+                            </Link>
+                          </li>
+                        ))}
                       </ul>
                     </section>
                   </div>

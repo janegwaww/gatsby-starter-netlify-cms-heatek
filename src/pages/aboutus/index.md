@@ -41,19 +41,4 @@ main:
           heading: 客户行为
           text: >
               客户可自行搭建信息化载体，如手机App，在 此载体之上进行操作，客户的行为与场景均会 被生态获取并解读。
-creaters:
-    heading: 创始团队
-    description: craete the company
-    image1:
-        alt: people
-        image: /img/creater.jpg
-    image2:
-        alt: people
-        image: /img/creater.jpg
-    image3:
-        alt: people
-        image: /img/creater.jpg
-timeline:
-    heading: company time line
-    description: company start at 2019
 ---

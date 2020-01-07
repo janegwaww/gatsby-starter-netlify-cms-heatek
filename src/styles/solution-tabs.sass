@@ -1,0 +1,65 @@
+@import "~bulma/sass/utilities/mixins"
+
+/* ------solution-tab start------
+.solution-tabs
+  .solution-card
+    border-radius: 4px
+    .solution-card-right
+      padding: 3rem 2.5rem
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      .button
+        max-width: 120px
+  +mobile
+    padding-top: 0.6rem
+    padding-bottom: 25px
+    .solution-card
+      border-radius: 2px
+      .solution-card-right
+        padding: 1.6rem 0.8rem
+        .button
+          margin: 0 auto
+        .solution-detail
+          min-height: 72px
+    .slick-dots
+      bottom: -28px
+      padding-left: 3em
+      li
+        margin: unset
+        & button:before
+          color: white
+          opacity: 1
+        &.slick-active button:before
+          color: #0C66FF
+  +tablet
+    .carousel
+      .slick-prev
+        left: -56px
+        &::before
+          content: none
+      .slick-next
+        right: -56px
+        &::before
+          content: none
+      .slick-list
+        overflow: unset
+  +tablet-only
+    .solution-card
+      .solution-card-right
+        padding: 1rem 0.8rem
+        .solution-detail
+          max-height: 48px
+  +desktop-only
+    .solution-card
+      .solution-card-right
+        padding: 2rem 2.5rem
+        .solution-detail
+          max-height: 72px
+  +widescreen-only
+    .solution-card
+      .solution-card-right
+        /* padding: 2rem 0.8rem
+        .solution-detail
+          max-height: 96px
+/* ------solution-tab end-------
